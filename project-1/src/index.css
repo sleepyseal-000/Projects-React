@@ -1,0 +1,27 @@
+
+body {
+  /*
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  */
+    background-color: rgb(182, 240, 221);
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+
+}
+
+h1 {
+  font-size: 6.4em;
+  line-height: 1.1;
+  color: aliceblue;
+  text-shadow: 2px 2px 3px rgb(180, 177, 177);
+  font-family: 'Montserrat';
+
+}
+
+
