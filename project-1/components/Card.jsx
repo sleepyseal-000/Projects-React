@@ -62,7 +62,7 @@ const cardData = [
     },
     {
       title: 'The Halal Guys',
-      description: 'Middle Easter',
+      description: 'Middle Eastern',
       link: 'https://thehalalguys.com/menu/',
       image: '../src/assets/img/3.webp',
       alt: 'green iguana',
