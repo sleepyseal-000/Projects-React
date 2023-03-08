@@ -1,34 +1,107 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import {
+  ChakraProvider,
+  Flex,
+  Heading,
+  HStack,
+  Button,
+  Text,
+  keyframes,
+} from "@chakra-ui/react";
+import FrontCard from "../components/FrontCard";
+import { useState } from "react";
+import BackCard from "../components/BackCard";
+import data from "../Quiz/data";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const rotate180 = keyframes`
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(180deg);
+}
+`;
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [quiz, setQuiz] = useState(data[0].quiz);
+  const [ans, setAnswer] = useState(data[0].answer);
+  const [toggle, setToggle] = useState(true);
+  const [img, setImg] = useState(data[0].img);
+
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleComponentClick = () => {
+    setIsRotated(!isRotated);
+  };
+
+  const increment = (count) => {
+    setCount((count + 1) % data.length);
+    setQuiz(data[count].quiz);
+    setAnswer(data[count].answer);
+    setImg(data[count].img);
+    setToggle(true);
+  };
+  const decrement = (count) => {
+    if (count > 0) {
+      setCount(count - 1);
+      setQuiz(data[count - 1].quiz);
+      setAnswer(data[count - 1].answer);
+      setImg(data[count - 1].img);
+      setToggle(true);
+    }
+  };
+  const getToggle = () => {
+    setToggle(!toggle);
+  };
+
+  
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <div className="bg-color">
+    <ChakraProvider>
+       <Heading className="main-heading"  fontSize="6xl">How much do you know about doggos?</Heading>
+        <Text className="text-heading" fontSize="3xl">
+          Doggos are really cute! But how much do you know about dogs? Test it out with this flash game!
+        </Text>
+        <Text className="card-heading"  fontSize="2xl">Number of cards: {data.length}</Text>
+      <Flex
+        width='100vw'
+        h='80vh'
+        direction='column'
+        alignItems="flex-start"
+        justifyContent='center'
+        paddingLeft='5rem'
+        gap='4'
+      >
+       
 
-export default App
+        <div>
+          <div onClick={getToggle}>
+            {toggle ? (
+              <FrontCard
+                data={quiz}
+                image={img}
+                handleComponentClick={handleComponentClick}
+              />
+            ) : (
+              <BackCard
+                data={ans}
+                handleComponentClick={handleComponentClick}
+              />
+            )}
+          </div>
+        </div>
+        <HStack>
+          <div className="button-group">
+          <Button   marginRight="1rem"         
+          onClick={() => decrement(count)}>previous quiz</Button>
+          <Button onClick={() => increment(count)}>Next quiz</Button>
+          </div>
+        </HStack>
+      </Flex>
+    </ChakraProvider>
+    </div>
+  );
+};
+
+export default App;
