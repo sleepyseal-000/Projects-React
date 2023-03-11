@@ -32,7 +32,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![doggo](https://user-images.githubusercontent.com/56409287/223857207-58c2d681-8e55-4cbf-849d-c09078cbd65d.gif)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap
