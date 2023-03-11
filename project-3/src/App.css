@@ -1,0 +1,66 @@
+@keyframes rotate180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.rotating-component {
+  animation: rotate180 0.1s;
+}
+
+.main-heading {
+  font-size: 9rem;
+  font-weight: bold;
+  /*color: #333; */
+  color: aliceblue;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.text-heading{
+
+  color: aliceblue;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
+
+.button-group{
+
+  padding-left: 2rem;
+
+}
+
+.card-heading{
+
+  color: aliceblue;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.bg-color{
+
+  background-color: #1b1a1ad3;
+  background-image: url('cute-dog.png');
+
+    /* Center and scale the image nicely */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-color {
+    background-size: cover;
+    background-position: bottom right;
+  }
+}
+
+.user-input{
+
+  padding-left: 2rem;
+}
