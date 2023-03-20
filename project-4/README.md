@@ -43,7 +43,7 @@ GIF created with LICEcap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+My main challenge, was about the restrictions with weight, if you notice there is a problem when it comes to put a specific range for weight in the ban list. 
 
 ## License
 
