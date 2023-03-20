@@ -1,0 +1,55 @@
+.btn {
+    margin: 0 5px;
+}
+
+.img-container {
+    margin: auto;
+    width: 450px;
+    height: 360px;
+    overflow: hidden;
+
+  }
+  
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30%;
+    object-position: center bottom; 
+  }
+
+  button {
+    min-width: 100px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color:rgb(221, 250, 215);
+    color:navy;
+    font-weight: bolder;
+    border-color: navy;
+    transition: all linear 0.3s;
+  }
+
+  .discover-btn {
+    color: white;
+    background-color: cornflowerblue;
+    border: 2px solid white;
+  }
+
+  button:hover{
+    color: white;
+    background-color: cornflowerblue;
+    border: 2px solid white;
+  }
+
+  .discover-btn:hover {
+    background-color:white;
+    color: rgb(0, 128, 96);
+    font-weight: bolder;
+    border-color: rgb(91, 211, 165);
+  }
+
+  .title-container{
+
+    padding-top: 2rem;
+    
+  }
