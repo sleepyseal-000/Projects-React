@@ -2,7 +2,7 @@
 
 Submitted by: **Miranda Casan**
 
-This web app: **insert description**
+This web app: **Discover dogs around the world! Using the Dog API, now you can find the dog with specific characterics and learn about the different temperaments that dogs can have. Try out this app!**
 
 Time spent: **10** hours spent in total
 
@@ -30,10 +30,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![doggo-API](https://user-images.githubusercontent.com/56409287/226447920-54d4016c-9479-43ee-9fa9-377680acdb1a.gif)
+
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with LICEcap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
