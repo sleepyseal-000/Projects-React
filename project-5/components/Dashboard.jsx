@@ -6,7 +6,7 @@ function Dashboard() {
   const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
 
-  const cities = ['London', 'New York', 'Tokyo', 'Paris', 'Sydney'];
+  const cities = ['London', 'New York', 'Tokyo', 'Paris', 'Sydney', 'Madrid'];
 
   useEffect(() => {
     const fetchData = async () => {

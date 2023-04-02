@@ -3,14 +3,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 40px;
 }
 
 .dashboard-container{
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 48vh;
+  height: 125vh;
+  padding-top: 50px;
 }
 
 input[type="text"] {

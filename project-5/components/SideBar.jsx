@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import './SideBar.css'; // import the CSS file
 import infoImage from '../src/assets/info.png';
 import { makeStyles } from '@material-ui/core/styles';
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
