@@ -65,3 +65,15 @@ input[type="text"] {
   font-size: 1.2rem;
   font-weight: normal;
 }
+
+.select-weather-condition {
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 200px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  margin-left: 10px;
+}

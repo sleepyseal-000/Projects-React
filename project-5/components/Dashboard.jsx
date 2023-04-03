@@ -1,30 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 
-function Dashboard() {
-  const [weatherData, setWeatherData] = useState(null);
+function Dashboard({ weatherData }) {
   const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
+  const [selectedWeatherCondition, setSelectedWeatherCondition] = useState('');
 
-  const cities = ['London', 'New York', 'Tokyo', 'Paris', 'Sydney', 'Madrid'];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await Promise.all(
-          cities.map(city =>
-            fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&key=7c7ffe4c1c9146d5b40eba8bc3a4b6ab`)
-              .then(response => response.json())
-              .then(data => data.data[0])
-          )
-        );
-        setWeatherData(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
+  
 
   useEffect(() => {
     if (weatherData) {
@@ -37,8 +20,18 @@ function Dashboard() {
   };
 
   const handleSearchButtonClick = () => {
-    // Implement your search logic here
+    const filteredCities = weatherData.filter((item) => {
+      const { city_name, weather } = item;
+      const cityNameMatches = city_name.toLowerCase().includes(searchInput.toLowerCase());
+      const weatherMatches = selectedWeatherCondition === '' || weather.description.toLowerCase().includes(selectedWeatherCondition.toLowerCase());
+      return cityNameMatches && weatherMatches;
+    });
+    setFilteredResults(filteredCities);
   };
+  
+  
+
+  console.log('weatherData:', weatherData);
 
   return (
     <div className="dashboard-container">
@@ -50,13 +43,25 @@ function Dashboard() {
           value={searchInput}
           onChange={handleSearchInputChange}
         />
-        <button
+         <button
           type="button"
           className="button-3"
           onClick={handleSearchButtonClick}
         >
           Search
         </button>
+
+        <select
+          className="select-weather-condition"
+          value={selectedWeatherCondition}
+          onChange={(e) => setSelectedWeatherCondition(e.target.value)}
+        >
+          <option value="">All</option>
+          <option value="few clouds">Few Clouds</option>
+          <option value="scattered clouds">Scattered Clouds</option>
+          <option value="clear sky">Clear Sky</option>
+          <option value="overcast clouds">Overcast clouds</option>
+        </select>
       </div>
       <div className="dashboard-card-container">
         {filteredResults.map((item) => {
@@ -69,7 +74,7 @@ function Dashboard() {
           return (
             <div key={city_name} className="weather-list">
               <h2>{city_name}</h2>
-              <p>{temp}&deg;C</p>
+              <p>Temperature: {temp}&deg;C</p>
               <p>{weather.description}</p>
               <p>Country Code: {country_code}</p>
             </div>

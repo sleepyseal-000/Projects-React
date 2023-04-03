@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import './SideBar.css'; // import the CSS file
 import infoImage from '../src/assets/info.png';
 import { makeStyles } from '@material-ui/core/styles';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -34,8 +35,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SideBar() {
+function SideBar(props) {
   const classes = useStyles();
+  const shuffledData = props.weatherData.sort(() => 0.5 - Math.random());
+  const randomData = shuffledData.slice(0, 3);
+
+
 
   return (
     <div className={classes.root}>
@@ -79,24 +84,17 @@ function SideBar() {
       <main className={classes.content}>
         {/* Your main content goes here */}
         <div className="dashboard-card-container">
-        <div className="card">
-          <h2>Card 1</h2>
-          <p>There is nothing here</p>
+          {randomData.map((data, index) => (
+            <div className="card" key={index}>
+              <h2>{data.city_name}</h2>
+              <p>Humidity: {data.rh} %</p>
+              <p>Wind: {data.wind_spd} m/s</p>
+            </div>
+          ))}
         </div>
-        <div className="card">
-          <h2>Card 2</h2>
-          <p>There is nothing here</p>
-        </div>
-        <div className="card">
-          <h2>Card 3</h2>
-          <p>There is nothing here</p>
-        </div>
-      </div>
-
       </main>
     </div>
   );
 }
-
 
 export default SideBar;
