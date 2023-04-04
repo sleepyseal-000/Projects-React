@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 import Chart from '../components/Chart';
+import WindDonutChart from '../components/WindDonutChart';
 
 function Dashboard({ weatherData }) {
   const [searchInput, setSearchInput] = useState('');
@@ -77,6 +78,9 @@ function Dashboard({ weatherData }) {
       </div>
       <div className="dashboard-chart-container">
         <Chart weatherData={filteredResults} />
+      </div>
+      <div className="dashboard-donut-container">
+        <WindDonutChart weatherData={filteredResults} />
       </div>
     </div>
   );

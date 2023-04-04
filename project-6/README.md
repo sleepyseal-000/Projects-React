@@ -1,4 +1,4 @@
-# Web Development Project 6 - *Name of App Here*
+# Web Development Project 6 - *Weather Dashboard-Part 2*
 
 Submitted by: **Your Name Here**
 
@@ -10,7 +10,7 @@ Time spent: **8** hours spent in total
 
 The following **required** functionality is completed:
 
-- [] **The app includes at least two unique chart developed using the fetched data that tell an interesting story**
+- [x] **The app includes at least two unique chart developed using the fetched data that tell an interesting story**
 - [ ] **Clicking on an item in the list view displays more details about it**
 - [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
 

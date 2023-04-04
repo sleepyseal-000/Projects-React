@@ -1,9 +1,22 @@
+.dashboard-chart-container, .dashboard-donut-container {
+  width: 50%;
+  height: 400px;
+  display: inline-block;
+  padding-top: 2em;
+}
+
+.dashboard-donut-container {
+  background-color: white;
+  /*border-radius: 2rem;*/
+}
+
 
 .dashboard-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 40px;
+  
 }
 
 .dashboard-container{
@@ -11,8 +24,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 155vh;
+  height: 188vh;
   padding-top: 50px;
+  padding-right: 20px;
 }
 
 input[type="text"] {
@@ -76,4 +90,8 @@ input[type="text"] {
   font-size: 1.2rem;
   color: #333;
   margin-left: 10px;
+}
+
+.recharts-tooltip {
+  font-size: 14px;
 }
