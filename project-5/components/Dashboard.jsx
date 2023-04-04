@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
+import Chart from '../components/Chart';
 
 function Dashboard({ weatherData }) {
   const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
   const [selectedWeatherCondition, setSelectedWeatherCondition] = useState('');
-
-
-  
 
   useEffect(() => {
     if (weatherData) {
@@ -28,10 +26,6 @@ function Dashboard({ weatherData }) {
     });
     setFilteredResults(filteredCities);
   };
-  
-  
-
-  console.log('weatherData:', weatherData);
 
   return (
     <div className="dashboard-container">
@@ -43,7 +37,7 @@ function Dashboard({ weatherData }) {
           value={searchInput}
           onChange={handleSearchInputChange}
         />
-         <button
+        <button
           type="button"
           className="button-3"
           onClick={handleSearchButtonClick}
@@ -80,6 +74,9 @@ function Dashboard({ weatherData }) {
             </div>
           );
         })}
+      </div>
+      <div className="dashboard-chart-container">
+        <Chart weatherData={filteredResults} />
       </div>
     </div>
   );
