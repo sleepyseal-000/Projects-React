@@ -47,7 +47,7 @@ GIF created with LICEcap
 Some of the challenge were the request for the API is limited so I have wait some time to get access again. The website is not responsive. 
 
 ## License
-![dashboard-API](https://user-images.githubusercontent.com/56409287/228961993-66a79e05-33f9-4d46-9aed-13989e6ab67a.gif)
+![project-5](https://user-images.githubusercontent.com/56409287/229682314-a86554a8-660f-49c0-96a1-bc6ea18f558d.gif)
 
     Copyright [2023] [Miranda Casan]
 
