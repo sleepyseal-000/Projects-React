@@ -1,0 +1,20 @@
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem; /* adjust this value as needed */
+  background-color: #E384A5;
+  margin-left: 18rem;
+  margin-right: 2rem;
+  border-radius: 20px;
+}
+
+body {
+  background-color: #9484E3;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+.MuiDrawer-paper {
+    background-color: #84E3C3 !important;
+  }
+  
+  .list{
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .list.title{
+    color:black;
+  }
+
+  .card {
+    background-color: #D4E384;
+    margin:2rem;
+    padding: 0 1rem 1rem 1rem;
+    color: black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 25%;
+  }
+  
+  
