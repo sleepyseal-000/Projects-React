@@ -1,8 +1,8 @@
 # Web Development Project 6 - *Weather Dashboard-Part 2*
 
-Submitted by: **Your Name Here**
+Submitted by: **Miranda Casan**
 
-This web app: **insert description**
+This web app: **Checks the weather of any city, temperature, description and country code. And it has charts that show weather of the following cities.**
 
 Time spent: **8** hours spent in total
 
@@ -31,11 +31,12 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with LICEcap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
+![project-6](https://user-images.githubusercontent.com/56409287/229711191-a48d88f3-5dda-43b9-8694-76be462f5003.gif)
 
 ## Notes
 
@@ -43,7 +44,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Miranda Casan]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
