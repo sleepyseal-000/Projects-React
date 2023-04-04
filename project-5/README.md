@@ -4,24 +4,26 @@ Submitted by: **Weather Dashboard**
 
 This web app: **Check the weather of any city, temperature, description and country code. **
 
-Time spent: **17** hours spent in total
+Time spent: **19** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The list displays a list of data fetched using an API call**
+- [x] **The list displays a list of data fetched using an API call**
 - [x] **Data uses the useEffect React hook and async/await syntax**
 - [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [ ] *insert details*
+  - [x] *City*
+  - [x] *Humidity*
+  - [x] *Wind*
 - [x] **A search bar allows the user to search for an item in the fetched data**
-- [ ] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [x] Multiple filters can be applied simultaneously
+- [x] Filters use different input types such as a text input, a selection, or a slider
+- [x] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
 
@@ -42,7 +44,7 @@ GIF created with LICEcap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Some of the challenge were the request for the API is limited so I have wait some time to get access again. The website is not responsive. 
 
 ## License
 ![dashboard-API](https://user-images.githubusercontent.com/56409287/228961993-66a79e05-33f9-4d46-9aed-13989e6ab67a.gif)
