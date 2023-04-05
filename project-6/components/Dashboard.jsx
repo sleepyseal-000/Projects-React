@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 import Chart from '../components/Chart';
 import WindDonutChart from '../components/WindDonutChart';
+import { Link } from 'react-router-dom';
+ 
 
 function Dashboard({ weatherData }) {
   const [searchInput, setSearchInput] = useState('');
@@ -72,6 +74,7 @@ function Dashboard({ weatherData }) {
               <p>Temperature: {temp}&deg;C</p>
               <p>{weather.description}</p>
               <p>Country Code: {country_code}</p>
+              {/*  <p><Link key={city_name} to={`/detail/${city_name}`} className="link-list"> </Link></p>*/}
             </div>
           );
         })}
