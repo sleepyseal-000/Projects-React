@@ -1,14 +1,22 @@
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
 }
 
+.route-container {
+  margin-left: 200px;
+  flex-grow: 1;
+}
 
-.routes-container{
+.top-left {
+  position: fixed;
+}
 
-background-color: brown;
-
+.bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
