@@ -1,0 +1,18 @@
+.card {
+    background-color:  rgb(100, 94, 90);
+    width: 300px;
+    height: 380px;
+    text-align: center;
+    border: 1px solid rgb(100, 94, 90);
+    border-radius: 5px;
+    box-shadow: rgb(88, 66, 49) 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(255, 85, 85)  10px -10px;
+    padding: 1rem;
+}
+
+.card-ctn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6rem;
+    padding: 3rem;
+}

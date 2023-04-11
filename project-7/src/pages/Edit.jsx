@@ -1,65 +1,104 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../supabaseClient'
-import { useNavigate } from "react-router-dom"
-import './Crewmate.css'
 
-const Crewmate = () => {
+const Edit = () => {
+    const { id } = useParams();
     const navigate = useNavigate();
-    const [crew, setCrew] = useState({ name: "", speed: 0, color: "" });
+    const [crew, setCrew] = useState({name: "", speed: 0, color: ""});
     const [formError, setFormError] = useState(null);
 
-    const createCrew = async (event) => {
+    const handleEdit = async(event) => {
         event.preventDefault();
 
         if (!crew.name || !crew.speed || !crew.color) {
             setFormError('Please fill in all the fields correctly.')
             return
         }
-
-        const {data, error} = await supabase
-            .from('crews')
-            .insert({ name: crew.name, speed: crew.speed, color: crew.color })
-            .select()
-
-            alert("Success! You created a crewmate!")
+        await supabase
+            .from("crews")
+            .update({name: crew.name, speed: crew.speed, color: crew.color})
+            .eq("id", id)
         
-
+        alert("Success! You Updated the information!")
+        navigate('/gallery')
     }
+
+    const handleDelete = async (event) => {
+        event.preventDefault();
+    
+        await supabase
+        .from('crews')
+        .delete()
+        .eq('id', id)
+        .select()
+    
+        navigate('/gallery')
+    }
+
+    useEffect(() => {
+        const fetchCrews = async() => {
+            const { data, error } = await supabase
+                .from("crews")
+                .select()
+                .eq("id", id)
+                .single()
+
+            if (error) {
+                navigate("/", {replace: true})
+            }
+
+            if (data) {
+                setCrew({
+                    name: data.name,
+                    speed: data.speed,
+                    color: data.color
+                })
+            }
+        }
+        fetchCrews()
+    },[id, navigate])
 
     const handleChange = (event) => {
         const {name, value} = event.target;
-        setCrew( (prev) => {
+        setCrew(prev => {
             return {
                 ...prev,
-                [name]:value,
+                [name]: value
             }
-        });
+        })
     }
 
   return (
     <div>
-        <br />
-        <h1>Create a New Crewmate</h1>
-        <br />
         <div>
+            <br />
+            <h1>Update Your Crewmate :)</h1>
+            <br />
+            <div>
             <img src="https://shimmering-stardust-c75334.netlify.app/assets/crewmates.43d07b24.png" width="40%" alt="img" />
+            </div>
+            <br />
+            <h2>Current Crewmate Info:</h2>
+            <br />
+            <h3>Name: {crew.name}, Speed: {crew.speed}, Color: {crew.color}</h3>
+            <br />
         </div>
-        <br />
-        <form onSubmit={createCrew} >
+    <form>
         <div className='form-container'>
         <div className='input-container'>
             <label htmlFor="name"><h2>Name: </h2></label> <br />
-            <input type="text" id="name" name="name" onChange={handleChange} className='text-input' />
+            <input type="text" id="name" name="name" value={crew.name} onChange={handleChange} className='text-input' />
         </div>
 
         <div className='input-container'>
             <label htmlFor="speed"> <h2>Speed (mph):</h2></label><br />
-            <input type="number" id="speed" name="speed" onChange={handleChange} className='text-input' />
+            <input type="number" id="speed" name="speed" value={crew.speed} onChange={handleChange} className='text-input' />
         </div>
 
-        <div className='input-container'>
+        <div className='input-container' >
             <label> <h2>Color: </h2></label>
-            <div className='radiobtn-container'>
+            <div className='radiobtn-container' >
                 <div>
                 <input type="radio" id="red" name="color" value='red' checked={crew.color === 'red'} onChange={handleChange} />
                 <label htmlFor="red">Red</label>
@@ -102,13 +141,15 @@ const Crewmate = () => {
             </div>
         </div>
         </div>
- 
-        <button type="submit" className='submit-btn' > Create Crewmate </button>
+
+        <button type='button' className='submit-btn red-border' onClick={handleEdit}> Update </button>
+        &nbsp;&nbsp;
+        <button type='button' className='submit-btn red-border' onClick={handleDelete}> Delete </button>
         {formError && <p className="error">{formError}</p>}
-                
     </form>
+    <br />
     </div>
   )
 }
 
-export default Crewmate
+export default Edit
