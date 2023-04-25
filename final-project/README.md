@@ -43,6 +43,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+![final](https://user-images.githubusercontent.com/56409287/234398152-26a82763-eae6-4757-bd36-c718a2e8861d.gif)
+
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICECAP
 <!-- Recommended tools:
@@ -53,6 +56,7 @@ GIF created with LICECAP
 ## Notes
 
 Describe any challenges encountered while building the app.
+The comment section is not finish, as well the organize cards function 
 
 ## License
 
