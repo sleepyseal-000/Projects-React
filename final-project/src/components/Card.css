@@ -95,3 +95,33 @@
 .submit-btn:hover {
   background-color: #9D0208;
 }
+
+@font-face{
+  font-family: "Vanilla";
+  src: url(../assets/VanillaDreamers-9Y7pK.otf);
+}
+
+.Vanilla{
+  font-family: "Vanilla";
+  color: black;
+}
+
+.button-edit-character{
+
+  padding-top: 2px;
+  background-color: #D00000;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.button-edit-character:hover {
+  background-color: #9D0208;
+}

@@ -11,7 +11,7 @@ const ShowCard = ({ data }) => {
 
         <div className='character-class-container'>
 
-          <h2> {characterClass} - {name} </h2>
+         <div className='Vanilla'> <h2> {characterClass} - {name} </h2></div>
 
         </div>
 
@@ -27,6 +27,12 @@ const ShowCard = ({ data }) => {
         <h2>Charisma: {cha} </h2>
         <h2>Constitution: {con}</h2>
         <h2>Wisdom: {wis}</h2>
+        </div>
+
+        <div>
+        <Link to={'/edit/${data.id}'}>
+            <button type='button' className='button-edit-character'>Edit Character</button>
+        </Link>
         </div>
       
     </div>
