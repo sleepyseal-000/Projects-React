@@ -21,10 +21,15 @@ const Nav = () => {
                 <h3> ⭐ Gallery </h3>
             </Link>
         </li>
+
+        <li>
+            <Link to="/comments" className="navlink">
+                <h3> 📰 Comments </h3>
+            </Link>
+        </li>
+
         </div>
-        <div className="bottom-left">
-            <img src="https://shimmering-stardust-c75334.netlify.app/assets/peeking.7c0ab599.png" width="200px" alt="icon" />
-        </div>
+       
     </div>
   );
 };
